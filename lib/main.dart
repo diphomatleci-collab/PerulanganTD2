@@ -5,9 +5,9 @@ void main() {
 }
 
 class Tes extends StatelessWidget {
-  List<String> menu = ["Soto", "Rawon"];
-  List<int> harga = [10000, 15000];
-  List<String> gambar = [
+  final List<String> menu = ["Soto", "Rawon"];
+  final List<int> harga = [10000, 15000];
+  final List<String> gambar = [
     "assets/soto.jpeg",
     "assets/rawon.jpeg",
   ];
@@ -29,6 +29,7 @@ class Tes extends StatelessWidget {
                 Text("Gambar"),
                 Text("Menu"),
                 Text("Harga"),
+                Text("Porsi"),
               ],
             ),
             //Data dari array
@@ -44,6 +45,15 @@ class Tes extends StatelessWidget {
                   ),
                   Text(menu[i]),
                   Text("Rp${harga[i]}"),
+
+                  //Text Field
+                  TextField(
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      hintText: "Porsi",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ],
               ),
           ],
